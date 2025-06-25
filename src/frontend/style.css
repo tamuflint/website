@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -357,4 +356,32 @@ html, body {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* Cover Nav (Bootstrap Cover style) */
+.cover-nav {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+.cover-nav-link {
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.cover-nav-link:hover, .cover-nav-link:focus {
+    background: #fff;
+    color: #333;
+    border-color: #fff;
+    text-decoration: none;
 }
