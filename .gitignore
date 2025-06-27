@@ -35,38 +35,6 @@ Thumbs.db
 *.db
 *.sqlite3
 ```# filepath: c:\Users\James\Desktop\marketing\website\website\.gitignore
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
 
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
-
-# Virtual environments
-venv/
-env/
-ENV/
-.env
-
-# IDE specific files
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# OS specific files
-.DS_Store
-Thumbs.db
-
-# Local development settings
-.env.local
-.env.development.local
-
-# Log files
-*.log
-
-# Database files
-*.db
+# Rust compilation files
+/src/backend/target
