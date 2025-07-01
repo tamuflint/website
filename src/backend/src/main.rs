@@ -20,4 +20,5 @@ fn rocket() -> _ {
     rocket::build()
         .mount("/", routes![home, redirect_public])
         .mount("/public", FileServer::from(relative!("../frontend")))
+        .mount("/assets", FileServer::from(relative!("../../assets")))
 }
