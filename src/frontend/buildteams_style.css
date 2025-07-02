@@ -1,3 +1,53 @@
+/* Logo Style */
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.flint-logo {
+    height: 55px; 
+    width: auto; 
+    display: block;
+    position: absolute;
+    top: 2.35rem;
+    right: 90rem;
+    display: flex;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+.flint-logo:hover{
+    animation-name: spin;
+    animation-duration: 4s;
+}
+/* Cover Nav (Bootstrap Cover style) */
+.cover-nav {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+.cover-nav-link {
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.cover-nav-link:hover, .cover-nav-link:focus {
+    background: #fff;
+    color: #333;
+    border-color: #fff;
+    text-decoration: none;
+}
+
 .jumbotron {
         padding-top: 6rem;
         padding-bottom: 6rem;
@@ -28,9 +78,10 @@
     }
     
     .hero-section {
-        background: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), 
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), 
                     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
         background-size: cover;
+        border-radius: 0;
     }
         #teamModal .modal-dialog {
         min-width: 600px;

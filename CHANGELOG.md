@@ -12,3 +12,7 @@
 6/17/25 - James - Made a better template that includes some cool JS and CSS.
 
 6/13/25 - Jayden - Uploaded some assets and started work on creating a button interface for the socials. Animating this button in css will be using the .icon class and will be next on the chopping block after I get the images to work.
+
+6/27/25 - Dreaux - Early backend changes, created this changelog file and made some documentation updates.
+
+6/28/25 - Jayden - Removed the hotbar for the build team showcase page and replaced it with buttons similar to the ones used on the homepage. I did this by copying the cover-nav classes over to buildteams_style.css. I left the original hotbar in the code if we ever to choose to go back. I also replaced the FLiNT logo and seek to eventually add an easter egg.5
