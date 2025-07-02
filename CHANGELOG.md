@@ -1,3 +1,4 @@
+7/1/25 - Dreux - Fixed Issue #15, allowing for asset serving so that the logo renders.
 
 6/27/25 - Jayden - Fixed various issues
 
