@@ -162,10 +162,10 @@
         background-size: cover;
         border-radius: 0;
     }
-        #teamModal .modal-dialog {
+        #committeeModal .modal-dialog {
         min-width: 600px;
     }
-    #teamModal .modal-content {
+    #committeeModal .modal-content {
         min-height: 800px;
     }
     
@@ -177,3 +177,8 @@
     .card-body .btn-group {
         margin-left: auto;
     }
+    
+    /* Make committee cards clickable */
+    .team-card {
+        cursor: pointer;
+    } 

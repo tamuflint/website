@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Build Teams</title>
+    <title>Committees</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="buildteams_style.css" rel="stylesheet">
+    <link href="committees_style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,145 +28,108 @@
     </div>
     <div class>
 
-
-
-    <!-- Commented out header, can add back :)
-    <header>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <div class="container d-flex justify-content-between">
-                <a href="index.html" class="navbar-brand d-flex align-items-center mr-3">
-                    <img src="../../assets/logo.png" alt="Home" style="height: 36px; width: auto; display: block;">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
-        <div class="collapse bg-dark" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">About</h4>
-                        <p class="text-muted">Discover the most innovative college build teams across the nation. From robotics to solar cars, these student-led teams are pushing the boundaries of engineering and design.</p>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                            <li><a href="#" class="text-white">Like on Facebook</a></li>
-                            <li><a href="#" class="text-white">Email us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    -->
-
     <main role="main">
         <section class="jumbotron text-center hero-section">
             <div class="container">
-                <h1 class="display-4 font-weight-bold">Build Teams</h1>
-                <p class="lead text-light">Showcasing the most innovative student engineering teams from universities across the country. These teams design, build, and compete with cutting-edge technology.</p>
+                <h1 class="display-4 font-weight-bold">Committees</h1>
+                <p class="lead text-light">Discover the various committees that drive FLINT's mission forward. Each committee plays a vital role in our organization's success and student development.</p>
                
             </div>
         </section>
-        <h2 class="text-center my-4" style="font-weight: 400;">2024-2025</h2>
-
-        <div class="album py-5 bg-light" id="teams">
+        <div class="album py-5 bg-light" id="committees">
             <div class="container">
                 <div class="row">
-                    <!-- MIT Solar Car Team -->
+                    <!-- Marketing Committee -->
                     <div class="col-md-6">
-                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#teamModal1">
+                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#committeeModal1">
                             <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
                                 <defs>
-                                    <linearGradient id="Flariokart" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect width="100%" height="100%" fill="url(#solar)"/>
-                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="20" font-weight="bold">☀️ Solar Car</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">FlarioKart vehicle team</h5>
-                                <p class="card-text">put a description of what your build team is about here</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Stanford Robotics -->
-                    <div class="col-md-6">
-                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#teamModal2">
-                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <defs>
-                                    <linearGradient id="robot" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect width="100%" height="100%" fill="url(#robot)"/>
-                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="20" font-weight="bold">🤖 Robotics</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Flockheedmartin drone team</h5>
-                                <p class="card-text">Building autonomous robots for competition and research. We specialize in AI, computer vision, and mechanical design for various robotics challenges.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cal Poly Formula SAE -->
-                    <div class="col-md-6">
-                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#teamModal3">
-                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <defs>
-                                    <linearGradient id="racing" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect width="100%" height="100%" fill="url(#racing)"/>
-                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="20" font-weight="bold">🏎️ Formula</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Wet Bandits aquatics team</h5>
-                                <p class="card-text">Engineering high-performance race cars for Formula SAE competitions. Focus on chassis design, engine optimization, and aerodynamics.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Georgia Tech Drone Racing -->
-                    <div class="col-md-6">
-                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#teamModal4">
-                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <defs>
-                                    <linearGradient id="drone" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <linearGradient id="marketing" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
                                         <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
                                     </linearGradient>
                                 </defs>
-                                <rect width="100%" height="100%" fill="url(#drone)"/>
-                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="18" font-weight="bold">🚁 Drone Racing</text>
+                                <rect width="100%" height="100%" fill="url(#marketing)"/>
+                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="20" font-weight="bold">📢 Marketing</text>
                             </svg>
                             <div class="card-body">
-                                <h5 class="card-title">DIRT environmental team</h5>
-                                <p class="card-text">Designing and piloting high-speed racing drones for collegiate competitions. Emphasis on flight control systems and aerodynamic optimization.</p>
+                                <h5 class="card-title">Marketing Committee</h5>
+                                <p class="card-text">Manages FLINT's brand, social media presence, and promotional materials. Ensures effective communication with our community.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Committee -->
+                    <div class="col-md-6">
+                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#committeeModal2">
+                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <defs>
+                                    <linearGradient id="service" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#service)"/>
+                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="20" font-weight="bold">🤝 Service</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Service Committee</h5>
+                                <p class="card-text">Oversees the overall direction and strategic planning of FLINT. Manages organizational goals and coordinates between all committees.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event Planning Committee -->
+                    <div class="col-md-6">
+                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#committeeModal3">
+                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <defs>
+                                    <linearGradient id="eventplanning" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#eventplanning)"/>
+                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="18" font-weight="bold">📅 Event Planning</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Event Planning Committee</h5>
+                                <p class="card-text">Plans and executes all FLINT events, workshops, and social gatherings. Creates opportunities for networking and community building.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Outreach Committee -->
+                    <div class="col-md-6">
+                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#committeeModal4">
+                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <defs>
+                                    <linearGradient id="professionaloutreach" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#professionaloutreach)"/>
+                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="16" font-weight="bold">💼 Professional Outreach</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Professional Outreach Committee</h5>
+                                <p class="card-text">Connects with industry partners, alumni, and other organizations. Builds relationships that benefit FLINT members and the community.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -177,25 +140,73 @@
                     </div>
                 </div>
                 
-                <h2 class="text-center my-4" style="font-weight: 400;">2025-2026</h2>
-                
                 <div class="row">
-                    <!-- Carnegie Mellon Autonomous Vehicle -->
+                    <!-- Internal Social Committee -->
                     <div class="col-md-6">
-                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#teamModal5">
+                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#committeeModal5">
                             <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
                                 <defs>
-                                    <linearGradient id="autonomous" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <linearGradient id="internal" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#e91e63;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#c2185b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#internal)"/>
+                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="18" font-weight="bold">🏠 Internal Social</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">Internal Social Committee</h5>
+                                <p class="card-text">Fosters community and camaraderie within FLINT through internal events, team building activities, and member engagement initiatives.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- External Social Committee -->
+                    <div class="col-md-6">
+                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#committeeModal6">
+                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <defs>
+                                    <linearGradient id="external" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ff9800;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#f57c00;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#external)"/>
+                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="18" font-weight="bold">🌍 External Social</text>
+                            </svg>
+                            <div class="card-body">
+                                <h5 class="card-title">External Social Committee</h5>
+                                <p class="card-text">Builds relationships with other organizations, universities, and communities through collaborative events and social initiatives.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Committee -->
+                    <div class="col-md-6">
+                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#committeeModal7">
+                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <defs>
+                                    <linearGradient id="design" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" style="stop-color:#1abc9c;stop-opacity:1" />
                                         <stop offset="100%" style="stop-color:#16a085;stop-opacity:1" />
                                     </linearGradient>
                                 </defs>
-                                <rect width="100%" height="100%" fill="url(#autonomous)"/>
-                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="16" font-weight="bold">🚗 Autonomous</text>
+                                <rect width="100%" height="100%" fill="url(#design)"/>
+                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="18" font-weight="bold">🎨 Design</text>
                             </svg>
                             <div class="card-body">
-                                <h5 class="card-title">CMU Autonomous Vehicle Team</h5>
-                                <p class="card-text">Developing self-driving vehicle technology for urban environments. Specializing in sensor fusion, machine learning, and real-time decision making.</p>
+                                <h5 class="card-title">Design Committee</h5>
+                                <p class="card-text">Provides technical expertise and support for FLINT projects. Organizes workshops and training sessions for skill development.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -205,22 +216,22 @@
                         </div>
                     </div>
 
-                    <!-- UC Berkeley Spacecraft -->
+                    <!-- Fundraising Committee -->
                     <div class="col-md-6">
-                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#teamModal6">
+                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#committeeModal8">
                             <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
                                 <defs>
-                                    <linearGradient id="space" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#34495e;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+                                    <linearGradient id="fundraising" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#229954;stop-opacity:1" />
                                     </linearGradient>
                                 </defs>
-                                <rect width="100%" height="100%" fill="url(#space)"/>
-                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="20" font-weight="bold">🚀 Space</text>
+                                <rect width="100%" height="100%" fill="url(#fundraising)"/>
+                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="18" font-weight="bold">💸 Fundraising</text>
                             </svg>
                             <div class="card-body">
-                                <h5 class="card-title">UC Berkeley Space Team</h5>
-                                <p class="card-text">Building satellites and rocket systems for space exploration missions. Focus on propulsion systems, orbital mechanics, and space communication.</p>
+                                <h5 class="card-title">Fundraising Committee</h5>
+                                <p class="card-text">Manages FLINT's budget, fundraising efforts, and financial planning. Ensures sustainable funding for all organizational activities.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -229,492 +240,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Texas A&M Submarine -->
-                    <div class="col-md-6">
-                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#teamModal7">
-                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <defs>
-                                    <linearGradient id="submarine" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#2980b9;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#1f4e79;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect width="100%" height="100%" fill="url(#submarine)"/>
-                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="18" font-weight="bold">🚤 Submarine</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Texas A&M Submarine Team</h5>
-                                <p class="card-text">Designing autonomous underwater vehicles for marine research and competition. Expertise in underwater navigation, sonar systems, and marine engineering.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Virginia Tech Hyperloop -->
-                    <div class="col-md-6">
-                        <div class="card mb-4 shadow-sm team-card" style="padding: 0.5rem 0;" data-toggle="modal" data-target="#teamModal8">
-                            <svg class="card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <defs>
-                                    <linearGradient id="hyperloop" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#e67e22;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#d35400;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect width="100%" height="100%" fill="url(#hyperloop)"/>
-                                <text x="50%" y="50%" fill="white" dy=".3em" text-anchor="middle" font-size="18" font-weight="bold">⚡ Hyperloop</text>
-                            </svg>
-                            <div class="card-body">
-                                <h5 class="card-title">Virginia Tech Hyperloop</h5>
-                                <p class="card-text">Pioneering next-generation transportation through magnetic levitation and vacuum tube technology. Focus on propulsion systems and pod design.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="text-muted">
-        <div class="container">
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
-            <p>College Build Teams showcase the best in student engineering innovation. Visit individual team pages to learn more about their projects and how to get involved.</p>
-            <p>New to build teams? <a href="#">Start here</a> or browse our <a href="#">getting started guide</a>.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
-    <div class="modal fade" id="teamModal1" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header" style="border-bottom: none;">
-            <h4 class="modal-title w-100 text-center" id="teamModalLabel1">FlarioKart vehicle team</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <div id="teamCarousel1" class="carousel slide mb-4" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#teamCarousel1" data-slide-to="0" class="active"></li>
-                <li data-target="#teamCarousel1" data-slide-to="1"></li>
-                <li data-target="#teamCarousel1" data-slide-to="2"></li>
-                <li data-target="#teamCarousel1" data-slide-to="3"></li>
-                <li data-target="#teamCarousel1" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#teamCarousel1" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#teamCarousel1" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Project Description</div>
-            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="teamModal2" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel2" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header" style="border-bottom: none;">
-            <h4 class="modal-title w-100 text-center" id="teamModalLabel2">Flockheedmartin drone team</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <div id="teamCarousel2" class="carousel slide mb-4" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#teamCarousel2" data-slide-to="0" class="active"></li>
-                <li data-target="#teamCarousel2" data-slide-to="1"></li>
-                <li data-target="#teamCarousel2" data-slide-to="2"></li>
-                <li data-target="#teamCarousel2" data-slide-to="3"></li>
-                <li data-target="#teamCarousel2" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#teamCarousel2" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#teamCarousel2" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Project Description</div>
-            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="teamModal3" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel3" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header" style="border-bottom: none;">
-            <h4 class="modal-title w-100 text-center" id="teamModalLabel3">Wet Bandits aquatics team</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <div id="teamCarousel3" class="carousel slide mb-4" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#teamCarousel3" data-slide-to="0" class="active"></li>
-                <li data-target="#teamCarousel3" data-slide-to="1"></li>
-                <li data-target="#teamCarousel3" data-slide-to="2"></li>
-                <li data-target="#teamCarousel3" data-slide-to="3"></li>
-                <li data-target="#teamCarousel3" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#teamCarousel3" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#teamCarousel3" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Project Description</div>
-            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="teamModal4" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel4" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header" style="border-bottom: none;">
-            <h4 class="modal-title w-100 text-center" id="teamModalLabel4">DIRT environmental team</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <div id="teamCarousel4" class="carousel slide mb-4" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#teamCarousel4" data-slide-to="0" class="active"></li>
-                <li data-target="#teamCarousel4" data-slide-to="1"></li>
-                <li data-target="#teamCarousel4" data-slide-to="2"></li>
-                <li data-target="#teamCarousel4" data-slide-to="3"></li>
-                <li data-target="#teamCarousel4" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#teamCarousel4" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#teamCarousel4" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Project Description</div>
-            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="teamModal5" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel5" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header" style="border-bottom: none;">
-            <h4 class="modal-title w-100 text-center" id="teamModalLabel5">CMU Autonomous Vehicle Team</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <div id="teamCarousel5" class="carousel slide mb-4" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#teamCarousel5" data-slide-to="0" class="active"></li>
-                <li data-target="#teamCarousel5" data-slide-to="1"></li>
-                <li data-target="#teamCarousel5" data-slide-to="2"></li>
-                <li data-target="#teamCarousel5" data-slide-to="3"></li>
-                <li data-target="#teamCarousel5" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#teamCarousel5" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#teamCarousel5" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Project Description</div>
-            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="teamModal6" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel6" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header" style="border-bottom: none;">
-            <h4 class="modal-title w-100 text-center" id="teamModalLabel6">UC Berkeley Space Team</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <div id="teamCarousel6" class="carousel slide mb-4" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#teamCarousel6" data-slide-to="0" class="active"></li>
-                <li data-target="#teamCarousel6" data-slide-to="1"></li>
-                <li data-target="#teamCarousel6" data-slide-to="2"></li>
-                <li data-target="#teamCarousel6" data-slide-to="3"></li>
-                <li data-target="#teamCarousel6" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#teamCarousel6" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#teamCarousel6" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Project Description</div>
-            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="teamModal7" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel7" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header" style="border-bottom: none;">
-            <h4 class="modal-title w-100 text-center" id="teamModalLabel7">Texas A&M Submarine Team</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <div id="teamCarousel7" class="carousel slide mb-4" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#teamCarousel7" data-slide-to="0" class="active"></li>
-                <li data-target="#teamCarousel7" data-slide-to="1"></li>
-                <li data-target="#teamCarousel7" data-slide-to="2"></li>
-                <li data-target="#teamCarousel7" data-slide-to="3"></li>
-                <li data-target="#teamCarousel7" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#teamCarousel7" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#teamCarousel7" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Project Description</div>
-            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="teamModal8" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel8" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header" style="border-bottom: none;">
-            <h4 class="modal-title w-100 text-center" id="teamModalLabel8">Virginia Tech Hyperloop</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <div id="teamCarousel8" class="carousel slide mb-4" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#teamCarousel8" data-slide-to="0" class="active"></li>
-                <li data-target="#teamCarousel8" data-slide-to="1"></li>
-                <li data-target="#teamCarousel8" data-slide-to="2"></li>
-                <li data-target="#teamCarousel8" data-slide-to="3"></li>
-                <li data-target="#teamCarousel8" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
-                </div>
-                <div class="carousel-item">
-                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#teamCarousel8" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#teamCarousel8" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Project Description</div>
-            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -722,5 +252,430 @@
     
     <!-- Mobile navbar functionality -->
     <script src="script.js"></script>
+    
+    <!-- Committee Modals -->
+    <div class="modal fade" id="committeeModal1" tabindex="-1" role="dialog" aria-labelledby="committeeModalLabel1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <h4 class="modal-title w-100 text-center" id="committeeModalLabel1">Marketing Committee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="committeeCarousel1" class="carousel slide mb-4" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#committeeCarousel1" data-slide-to="0" class="active"></li>
+                <li data-target="#committeeCarousel1" data-slide-to="1"></li>
+                <li data-target="#committeeCarousel1" data-slide-to="2"></li>
+                <li data-target="#committeeCarousel1" data-slide-to="3"></li>
+                <li data-target="#committeeCarousel1" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#committeeCarousel1" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#committeeCarousel1" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Committee Description</div>
+            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
+              Manages FLINT's brand, social media presence, and promotional materials. Ensures effective communication with our community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="committeeModal2" tabindex="-1" role="dialog" aria-labelledby="committeeModalLabel2" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <h4 class="modal-title w-100 text-center" id="committeeModalLabel2">Service Committee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="committeeCarousel2" class="carousel slide mb-4" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#committeeCarousel2" data-slide-to="0" class="active"></li>
+                <li data-target="#committeeCarousel2" data-slide-to="1"></li>
+                <li data-target="#committeeCarousel2" data-slide-to="2"></li>
+                <li data-target="#committeeCarousel2" data-slide-to="3"></li>
+                <li data-target="#committeeCarousel2" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#committeeCarousel2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#committeeCarousel2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Committee Description</div>
+            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
+              Oversees the overall direction and strategic planning of FLINT. Manages organizational goals and coordinates between all committees.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="committeeModal3" tabindex="-1" role="dialog" aria-labelledby="committeeModalLabel3" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <h4 class="modal-title w-100 text-center" id="committeeModalLabel3">Event Planning Committee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="committeeCarousel3" class="carousel slide mb-4" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#committeeCarousel3" data-slide-to="0" class="active"></li>
+                <li data-target="#committeeCarousel3" data-slide-to="1"></li>
+                <li data-target="#committeeCarousel3" data-slide-to="2"></li>
+                <li data-target="#committeeCarousel3" data-slide-to="3"></li>
+                <li data-target="#committeeCarousel3" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#committeeCarousel3" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#committeeCarousel3" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Committee Description</div>
+            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
+              Plans and executes all FLINT events, workshops, and social gatherings. Creates opportunities for networking and community building.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="committeeModal4" tabindex="-1" role="dialog" aria-labelledby="committeeModalLabel4" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <h4 class="modal-title w-100 text-center" id="committeeModalLabel4">Professional Outreach Committee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="committeeCarousel4" class="carousel slide mb-4" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#committeeCarousel4" data-slide-to="0" class="active"></li>
+                <li data-target="#committeeCarousel4" data-slide-to="1"></li>
+                <li data-target="#committeeCarousel4" data-slide-to="2"></li>
+                <li data-target="#committeeCarousel4" data-slide-to="3"></li>
+                <li data-target="#committeeCarousel4" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#committeeCarousel4" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#committeeCarousel4" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Committee Description</div>
+            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
+              Connects with industry partners, alumni, and other organizations. Builds relationships that benefit FLINT members and the community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="committeeModal5" tabindex="-1" role="dialog" aria-labelledby="committeeModalLabel5" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <h4 class="modal-title w-100 text-center" id="committeeModalLabel5">Internal Social Committee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="committeeCarousel5" class="carousel slide mb-4" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#committeeCarousel5" data-slide-to="0" class="active"></li>
+                <li data-target="#committeeCarousel5" data-slide-to="1"></li>
+                <li data-target="#committeeCarousel5" data-slide-to="2"></li>
+                <li data-target="#committeeCarousel5" data-slide-to="3"></li>
+                <li data-target="#committeeCarousel5" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#committeeCarousel5" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#committeeCarousel5" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Committee Description</div>
+            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
+              Fosters community and camaraderie within FLINT through internal events, team building activities, and member engagement initiatives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="committeeModal6" tabindex="-1" role="dialog" aria-labelledby="committeeModalLabel6" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <h4 class="modal-title w-100 text-center" id="committeeModalLabel6">External Social Committee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="committeeCarousel6" class="carousel slide mb-4" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#committeeCarousel6" data-slide-to="0" class="active"></li>
+                <li data-target="#committeeCarousel6" data-slide-to="1"></li>
+                <li data-target="#committeeCarousel6" data-slide-to="2"></li>
+                <li data-target="#committeeCarousel6" data-slide-to="3"></li>
+                <li data-target="#committeeCarousel6" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#committeeCarousel6" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#committeeCarousel6" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Committee Description</div>
+            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
+              Builds relationships with other organizations, universities, and communities through collaborative events and social initiatives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="committeeModal7" tabindex="-1" role="dialog" aria-labelledby="committeeModalLabel7" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <h4 class="modal-title w-100 text-center" id="committeeModalLabel7">Design Committee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="committeeCarousel7" class="carousel slide mb-4" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#committeeCarousel7" data-slide-to="0" class="active"></li>
+                <li data-target="#committeeCarousel7" data-slide-to="1"></li>
+                <li data-target="#committeeCarousel7" data-slide-to="2"></li>
+                <li data-target="#committeeCarousel7" data-slide-to="3"></li>
+                <li data-target="#committeeCarousel7" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#committeeCarousel7" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#committeeCarousel7" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Committee Description</div>
+            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
+              Provides technical expertise and support for FLINT projects. Organizes workshops and training sessions for skill development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="committeeModal8" tabindex="-1" role="dialog" aria-labelledby="committeeModalLabel8" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <h4 class="modal-title w-100 text-center" id="committeeModalLabel8">Fundraising Committee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="committeeCarousel8" class="carousel slide mb-4" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#committeeCarousel8" data-slide-to="0" class="active"></li>
+                <li data-target="#committeeCarousel8" data-slide-to="1"></li>
+                <li data-target="#committeeCarousel8" data-slide-to="2"></li>
+                <li data-target="#committeeCarousel8" data-slide-to="3"></li>
+                <li data-target="#committeeCarousel8" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 1</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 2</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 3</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 4</div>
+                </div>
+                <div class="carousel-item">
+                  <div style="width:100%;height:320px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#888;">Photo 5</div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#committeeCarousel8" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#committeeCarousel8" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="w-100 text-center mt-3 mb-2" style="font-weight:500;">Committee Description</div>
+            <p class="mx-auto" style="max-width: 500px; min-width: 250px; text-align: center;">
+              Manages FLINT's budget, fundraising efforts, and financial planning. Ensures sustainable funding for all organizational activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
-</html>
+</html> 
