@@ -1,3 +1,4 @@
+#[cfg(test)] mod tests;
 #[macro_use] extern crate rocket;
 use rocket::fs::{FileServer, relative};
 use rocket::response::Redirect;
