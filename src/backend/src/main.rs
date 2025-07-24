@@ -20,6 +20,6 @@ fn redirect_public() -> Redirect {
 fn rocket() -> _ {
     rocket::build()
         .mount("/", routes![home, redirect_public])
-        .mount("/public", FileServer::from(relative!("../frontend")))
-        .mount("/assets", FileServer::from(relative!("../../assets")))
+        .mount("/public", FileServer::from("/app/src/frontend"))
+        .mount("/assets", FileServer::from("/app/assets"))
 }
