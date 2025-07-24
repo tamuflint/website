@@ -1,5 +1,14 @@
 /* Removed spinning logo */
 
+/* Modal and Carousel Sizing */
+.modal-lg {
+    max-width: 800px;
+}
+
+.carousel-inner .carousel-item > div {
+    height: 480px !important;
+}
+
 /* Cover Nav (Bootstrap Cover style) - DARK GRAY TRANSPARENT */
 .cover-nav {
     position: fixed;
