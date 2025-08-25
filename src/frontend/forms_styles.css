@@ -1,3 +1,8 @@
+@media (max-width: 768px) {
+    .cover-nav {
+        position: static !important;
+    }
+}
 /* Forms Page Styling */
 
 /* Modal and Carousel Sizing */
