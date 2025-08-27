@@ -14,13 +14,15 @@ html, body {
 
 /* Cover Section */
 .cover-container {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        position: relative;
-        overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Change from min-height to height */
+    max-height: 100vh; /* Prevent any expansion */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0; /* Prevent flex shrinking */
 }
 
 .cover-container::before {
@@ -31,7 +33,7 @@ html, body {
     right: 0;
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="g"><stop offset="20%" stop-opacity=".1"/><stop offset="50%" stop-opacity=".05"/><stop offset="100%" stop-opacity="0"/></radialGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/></svg>');
-    animation: float 20s ease-in-out infinite;
+    animation: none;
 }
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -50,12 +52,13 @@ html, body {
 }
 /* Logo styling */
 .logo-container {
-    margin-bottom: 2rem;
+    margin: 0.5rem 0 1rem 0 !important; /* Reduced top margin */
     animation: logoFadeIn 2s ease;
 }
 .flint-logo {
     width: 520px;
     height: auto;
+    border: 1px solid red; /* Debug: show logo bounds */
     /* No filter, color, or transition to ensure PNG logo always displays correctly */
 }
 @keyframes logoFadeIn {
@@ -135,6 +138,9 @@ html, body {
 .content-section {
     background: #f8f9fa;
     min-height: 100vh;
+    position: relative;
+    z-index: 10; /* Higher than cover container */
+    margin-top: 0; /* Ensure no gap */
 }
 .container {
     max-width: 1200px;
@@ -236,10 +242,12 @@ html, body {
     padding: 4rem 0;
 }
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 3rem;
+    justify-content: center;
+    align-items: stretch;
 }
 .feature-card {
     background: #f8f9fa;
@@ -247,6 +255,8 @@ html, body {
     border-radius: 15px;
     transition: all 0.3s ease;
     border-left: 4px solid #667eea;
+    flex: 0 1 350px; /* Don't grow, can shrink, preferred width 350px */
+    max-width: 400px; /* Prevent cards from getting too wide */
 }
 .feature-card:hover {
     transform: translateY(-5px);
