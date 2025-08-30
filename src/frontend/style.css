@@ -109,7 +109,6 @@ html, body {
 .flint-logo {
     width: 520px;
     height: auto;
-    border: 1px solid red; /* Debug: show logo bounds */
     /* No filter, color, or transition to ensure PNG logo always displays correctly */
 }
 @keyframes logoFadeIn {
