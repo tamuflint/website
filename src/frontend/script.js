@@ -31,7 +31,7 @@ function currentSlide(index) {
 // Auto-play carousel
 setInterval(() => {
     moveSlide(1);
-}, 5000);
+}, 7000); // Slowed down to 8 seconds
 
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
