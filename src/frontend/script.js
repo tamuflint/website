@@ -48,7 +48,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Email function
 function openEmail() {
-    window.location.href = 'mailto:flint@tamu.edu?subject=FLINT Inquiry&body=Hello FLINT team,';
+    window.location.href = 'mailto:flintpresidents@tamu.edu?subject=FLINT Inquiry&body=Hello FLINT team,';
 }
 
 // Parallax effect for cover section
