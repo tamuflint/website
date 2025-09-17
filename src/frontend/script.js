@@ -46,9 +46,74 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Email function
+// Email function - open mail client in a new window/tab with a fallback
 function openEmail() {
-    window.location.href = 'mailto:flintpresidents@tamu.edu?subject=FLINT Inquiry&body=Hello FLINT team,';
+    const to = 'flintpresidents@gmail.com';
+    const subject = encodeURIComponent('FLINT Inquiry');
+    const body = encodeURIComponent('Hello FLINT team,');
+    const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+    /*
+    // Try to open in a new tab/window first (some browsers block this)
+    const newWindow = window.open(mailto, '_blank');
+    if (newWindow) {
+        try { newWindow.focus(); } catch (e) {}
+        return;
+    }
+
+    // Fallback to navigating the current window
+    window.location.href = mailto;
+    */
+}
+
+// Enhanced email helper: copy to clipboard and show a temporary UI change
+function copyEmailToClipboard(email) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(email);
+    }
+    // Fallback for older browsers
+    return new Promise((resolve, reject) => {
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        try {
+            const successful = document.execCommand('copy');
+            document.body.removeChild(textarea);
+            successful ? resolve() : reject();
+        } catch (err) {
+            document.body.removeChild(textarea);
+            reject(err);
+        }
+    });
+}
+
+// Wrapper to call when the Email button is clicked
+function handleEmailButtonClick() {
+    const email = 'flintpresidents@gmail.com';
+    const btn = document.querySelector('.email-btn');
+    if (btn) {
+        const originalText = btn.textContent;
+        // Copy email to clipboard
+        copyEmailToClipboard(email).then(() => {
+            btn.textContent = 'copied to clip board';
+            btn.disabled = true;
+            // revert after 10s
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 10000);
+        }).catch(() => {
+            // If copy fails, still give user feedback
+            btn.textContent = 'copied to clip board';
+            setTimeout(() => btn.textContent = originalText, 4000);
+        });
+    }
+
+    // (mail client opening is commented out for now)
+    // openEmail();
 }
 
 // Parallax effect for cover section
