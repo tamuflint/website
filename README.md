@@ -15,4 +15,4 @@ The backend of the server is built on rust using the [Rocket.rs](https://rocket.
 To contribute to the backend, you will need cargo, as well as rustc. These are all installed when you install rust using rustup as is recommended on the [official rust website](https://www.rust-lang.org).
 
 You can run the backend using the `cargo run` command from within the backend directory. Be aware, compilation can take a while due to the size of the rocket crate, and your first run will take the longest as all compilation targets, not just the ones you change, need to be compiled.
-asfahsfsdkjf
+asfahsfsdkjfasfsdf
