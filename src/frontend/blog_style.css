@@ -1,0 +1,113 @@
+/* Blog page specific styles - minimal scaffold */
+
+.blog-container {
+    padding: 4rem 2rem;
+    /* Account for fixed navbar height so content doesn't get covered */
+    padding-top: calc(4rem + 70px);
+    min-height: 60vh;
+}
+
+.blog-heading {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Provide some basic responsive rules, they can be expanded later */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 2rem 1rem;
+    }
+    .blog-heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Navbar styles copied from style.css so the nav shows up on this page */
+.cover-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(40, 40, 40, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 1rem 2rem;
+    height: 70px;
+}
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.navbar-links {
+    display: flex;
+    gap: 1.25rem;
+}
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+}
+.navbar-toggle-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.navbar-toggle-icon::before,
+.navbar-toggle-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+.navbar-toggle-icon::before { top: -8px; }
+.navbar-toggle-icon::after { bottom: -8px; }
+.navbar-toggle.active .navbar-toggle-icon { background-color: transparent; }
+.navbar-toggle.active .navbar-toggle-icon::before { transform: rotate(45deg); top: 0; }
+.navbar-toggle.active .navbar-toggle-icon::after { transform: rotate(-45deg); bottom: 0; }
+.cover-nav-link {
+    color: #fff;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.cover-nav-link:hover { color: #3498db; }
+
+@media (max-width: 768px) {
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(40, 40, 40, 0.95);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    .navbar-links.active { transform: translateY(0); opacity: 1; visibility: visible; }
+    .navbar-toggle { display: block; }
+}
