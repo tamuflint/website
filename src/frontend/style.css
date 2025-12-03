@@ -17,6 +17,8 @@ html, body {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 
@@ -442,6 +444,15 @@ html, body {
     font-weight: bold;
     font-size: 1.2rem;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-logo {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
 }
 
 .navbar-links {
