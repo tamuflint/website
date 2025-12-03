@@ -15,6 +15,7 @@
     <title>Calendar</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="forms_styles.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -150,7 +151,6 @@
     
     <!-- Mobile navbar functionality -->
     <script src="script.js"></script>
-
     <style>
         .bannering-status {
             max-width: 800px;
@@ -351,5 +351,11 @@
         // Update every minute to handle day changes
         setInterval(updateBanneringStatus, 60000);
     </script>
+        
 </body>
 </html>
+
+<style>
+/* Ensure navbar sits above all page content (overrides other styles) */
+.cover-nav { z-index: 2147483647 !important; position: fixed !important; top: 0; left: 0; right: 0; }
+</style>

@@ -29,55 +29,46 @@
 
     <main class="content-section blog-container">
         <div class="container">
-            <article class="news-article">
-                <!-- Article Header -->
-                <header class="article-header">
-                    <h1 class="article-title">Welcome to You 2, Kronck</h1>
-                    <div class="article-meta">
-                        <span class="article-date">January 15, 2025</span>
-                        <span class="article-author">FLINT Editorial Team</span>
+
+            <h1 class="blog-heading">Blog</h1>
+
+            <div class="blog-grid">
+                <aside class="headline-column" aria-labelledby="headlines-title">
+                    <h2 id="headlines-title" class="hc-title">Latest</h2>
+                    <ul class="headline-list">
+                        <!-- REPLACE_ME: FliNT Adopt a Street -->
+                        <li><a href="#" class="headline-item" data-title="FliNT Adopt a Street" data-body="Placeholder for 'FliNT Adopt a Street'. Replace this with the full article text about the Adopt a Street event, participants, date, and impact." data-img="https://placehold.co/800x450?text=FliNT+Adopt+1">FliNT Adopt a Street</a></li>
+
+                        <!-- REPLACE_ME: FLiNTs-Giving Community Building -->
+                        <li><a href="#" class="headline-item" data-title="FLiNTs-Giving Community Building" data-body="Placeholder for 'FLiNTs-Giving Community Building'. Replace with details about the community building event, activities, and outcomes." data-img="https://placehold.co/800x450?text=FLiNTs-Giving">FLiNTs-Giving Community Building</a></li>
+
+                        <!-- REPLACE_ME: FLiNT with Texas Ramp Project -->
+                        <li><a href="#" class="headline-item" data-title="FLiNT with Texas Ramp Project" data-body="Placeholder for 'FLiNT with Texas Ramp Project'. Replace with a writeup of the collaboration, tasks performed, and photos from the project." data-img="https://placehold.co/800x450?text=Texas+Ramp+Project">FLiNT with Texas Ramp Project</a></li>
+
+                        <!-- REPLACE_ME: Freshmen of the Week for November -->
+                        <li><a href="#" class="headline-item" data-title="Freshmen of the Week for November" data-body="Placeholder for 'Freshmen of the Week for November'. Replace with short bios and highlights for the featured freshmen." data-img="https://placehold.co/800x450?text=Freshmen+Nov">Freshmen of the Week for November</a></li>
+
+                        <!-- REPLACE_ME: Freshmen of the Week for October -->
+                        <li><a href="#" class="headline-item" data-title="Freshmen of the Week for October" data-body="Placeholder for 'Freshmen of the Week for October'. Replace with short bios and highlights for the featured freshmen." data-img="https://placehold.co/800x450?text=Freshmen+Oct">Freshmen of the Week for October</a></li>
+
+                        <!-- REPLACE_ME: Fall Retreat Team Building -->
+                        <li><a href="#" class="headline-item" data-title="Fall Retreat Team Building" data-body="Placeholder for 'Fall Retreat Team Building'. Replace with a recap of team-building activities, schedule, and learnings from the retreat." data-img="https://placehold.co/800x450?text=Fall+Retreat">Fall Retreat Team Building</a></li>
+
+                        <!-- REPLACE_ME: Welcome Class of '29 -->
+                        <li><a href="#" class="headline-item" data-title="Welcome Class of '29" data-body="Placeholder for 'Welcome Class of '29'. Replace with welcome message, orientation highlights, and useful links for new members." data-img="https://placehold.co/800x450?text=Welcome+Class+of+29">Welcome Class of '29</a></li>
+
+                        <!-- REPLACE_ME: Bannering and Applications -->
+                        <li><a href="#" class="headline-item" data-title="Bannering and Applications" data-body="Placeholder for 'Bannering and Applications'. Replace with information about banner events, application deadlines, and how to sign up." data-img="https://placehold.co/800x450?text=Bannering+Applications">Bannering and Applications</a></li>
+                    </ul>
+                </aside>
+
+                <section class="blog-main" aria-live="polite">
+                    <div class="article-preview empty">
+                        <p class="muted">Select a headline to view details.</p>
                     </div>
-                </header>
+                </section>
+            </div>
 
-                <!-- Featured Image -->
-                <div class="article-featured-image">
-                    <img src="../../assets/group-photo.JPG" alt="FLINT Group Photo" />
-                </div>
-
-                <!-- Article Content -->
-                <div class="article-content">
-                    <p class="article-lead">
-                        A FLO focused on developing the whole person by providing engineering entrepreneurship and specialized committee experience in a welcoming environment for freshmen.
-                    </p>
-                    
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    
-                    <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-
-                    <h2>Building the Future</h2>
-                    
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    </p>
-
-                    <p>
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                    </p>
-                </div>
-
-                <!-- Article Footer -->
-                <footer class="article-footer">
-                    <div class="article-tags">
-                        <span class="tag">Technology</span>
-                        <span class="tag">Leadership</span>
-                        <span class="tag">Community</span>
-                    </div>
-                </footer>
-            </article>
         </div>
     </main>
 
@@ -88,5 +79,51 @@
     </footer>
 
 <script src="script.js"></script>
+<!-- Inline preview script: clicking a headline populates the right column -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const items = document.querySelectorAll('.headline-item');
+    const previewHost = document.querySelector('.blog-main');
+
+    if (!previewHost) return;
+
+    items.forEach((item, idx) => {
+        // add data attributes if missing so each headline has placeholder content
+        if (!item.dataset.title) item.dataset.title = item.textContent.trim();
+        if (!item.dataset.body) item.dataset.body = 'Placeholder text here. Replace with the full article copy later.';
+        if (!item.dataset.img) item.dataset.img = 'https://placehold.co/800x450?text=Placeholder+' + (idx+1);
+
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            // set active state
+            items.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+            const title = item.dataset.title;
+            const body = item.dataset.body;
+            const img = item.dataset.img;
+
+            previewHost.innerHTML = `
+                <article class="article-preview">
+                    <h3 class="article-title">${title}</h3>
+                    <div class="article-media">
+                        <img class="article-image" src="${img}" alt="${title} image">
+                    </div>
+                    <p class="article-body">${body}</p>
+                </article>
+            `;
+
+            // move focus into preview for accessibility
+            const firstHeading = previewHost.querySelector('.article-title');
+            if (firstHeading) firstHeading.focus({preventScroll:true});
+        });
+    });
+});
+</script>
 </body>
 </html>
+
+<style>
+/* Ensure navbar sits above all page content (overrides other styles) */
+.cover-nav { z-index: 2147483647 !important; position: fixed !important; top: 0; left: 0; right: 0; }
+</style>
