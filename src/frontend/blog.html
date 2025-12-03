@@ -29,7 +29,28 @@
         <!-- Placeholder for blog content: left blank per request -->
         <div class="container">
             <h1 class="blog-heading">Blog</h1>
-            <!-- Blog posts will go here in the future -->
+
+            <div class="blog-grid">
+                <aside class="headline-column" aria-labelledby="headlines-title">
+                    <h2 id="headlines-title" class="hc-title">Latest</h2>
+                    <ul class="headline-list">
+                        <li><a href="#" class="headline-item">Placeholder headline one — interesting development</a></li>
+                        <li><a href="#" class="headline-item">Placeholder headline two — another update</a></li>
+                        <li><a href="#" class="headline-item">Placeholder headline three — breaking news</a></li>
+                        <li><a href="#" class="headline-item">Placeholder headline four — insights and trends</a></li>
+                        <li><a href="#" class="headline-item">Placeholder headline five — interview roundup</a></li>
+                        <li><a href="#" class="headline-item">Placeholder headline six — feature story</a></li>
+                        <li><a href="#" class="headline-item">Placeholder headline seven — short report</a></li>
+                        <li><a href="#" class="headline-item">Placeholder headline eight — final note</a></li>
+                    </ul>
+                </aside>
+
+                <section class="blog-main" aria-live="polite">
+                    <div class="article-preview empty">
+                        <p class="muted">Select a headline on the left to view details.</p>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 
@@ -40,5 +61,46 @@
     </footer>
 
 <script src="script.js"></script>
+<!-- Inline preview script: clicking a headline populates the right column -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const items = document.querySelectorAll('.headline-item');
+    const previewHost = document.querySelector('.blog-main');
+
+    if (!previewHost) return;
+
+    items.forEach((item, idx) => {
+        // add data attributes if missing so each headline has placeholder content
+        if (!item.dataset.title) item.dataset.title = item.textContent.trim();
+        if (!item.dataset.body) item.dataset.body = 'Placeholder text here. Replace with the full article copy later.';
+        if (!item.dataset.img) item.dataset.img = 'https://placehold.co/800x450?text=Placeholder+' + (idx+1);
+
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            // set active state
+            items.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+            const title = item.dataset.title;
+            const body = item.dataset.body;
+            const img = item.dataset.img;
+
+            previewHost.innerHTML = `
+                <article class="article-preview">
+                    <h3 class="article-title">${title}</h3>
+                    <div class="article-media">
+                        <img class="article-image" src="${img}" alt="${title} image">
+                    </div>
+                    <p class="article-body">${body}</p>
+                </article>
+            `;
+
+            // move focus into preview for accessibility
+            const firstHeading = previewHost.querySelector('.article-title');
+            if (firstHeading) firstHeading.focus({preventScroll:true});
+        });
+    });
+});
+</script>
 </body>
 </html>
