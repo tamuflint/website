@@ -36,12 +36,13 @@ html, body {
     background-size: cover;
     background-position: 100% 20%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     
     color: white;
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
+    z-index: 0;
 }
 
 /* REMOVE OR COMMENT OUT THE ::before PSEUDO-ELEMENT - IT'S BLOCKING THE IMAGE */
@@ -65,7 +66,6 @@ html, body {
                     url('../../assets/group-photo.JPG') !important;
         background-attachment: scroll !important;
         background-position: center 30% !important;
-        
         background-size: cover !important;
         background-repeat: no-repeat !important;
     }
@@ -198,6 +198,23 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+main {
+    position: relative;
+    z-index: 10;
+}
+.jumbotron,
+.hero-section,
+.album,
+.carousel-section,
+.about-section,
+.contact-section,
+.forms-container,
+.month-section {
+    position: relative;
+    z-index: 10;
 }
 .section-padding {
     padding: 4rem 0;
@@ -331,7 +348,7 @@ html, body {
 }
 /* Contact Section */
 .contact-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #000 !important;
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -431,7 +448,8 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    /* High z-index to keep nav above page content */
+    z-index: 20000;
     background-color: rgba(40, 40, 40, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -553,4 +571,139 @@ html, body {
 .cover-nav-link:hover {
     color: #3498db;
     text-decoration: none;
+}
+
+/* Site-wide dark theme overrides (applies blog-like black background and white text) */
+html, body {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* Replace light content backgrounds with dark alternatives */
+.content-section,
+.carousel-section,
+.about-section,
+.month-section,
+.album,
+.forms-container,
+.forms-grid,
+.feature-card,
+.card,
+.team-card,
+.modal-content {
+    background: transparent !important;
+    color: #fff !important;
+}
+
+.section-title,
+.feature-title,
+.event-title,
+.card-title,
+.article-title,
+.blog-heading,
+.hc-title {
+    color: #fff !important;
+}
+
+.feature-text,
+.event-desc,
+.card-text,
+.article-body,
+.lead,
+.muted {
+    color: rgba(255,255,255,0.85) !important;
+}
+
+/* Override Bootstrap utility background classes that force light backgrounds */
+.bg-light {
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+/* Cards and panels get a subtle dark surface */
+.card,
+.feature-card,
+.team-card,
+.month-section {
+    background: rgba(255,255,255,0.02) !important;
+    border: 1px solid rgba(255,255,255,0.04) !important;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.6) !important;
+}
+
+/* Jumbotron / hero: keep background image but darken text area */
+.hero-section,
+.cover-container .inner {
+    background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+}
+
+/* Override jumbotron backgrounds to be transparent so content shows */
+.jumbotron {
+    background: transparent !important;
+    position: relative;
+    z-index: 11 !important;
+}
+
+/* Footer stays dark but ensure text is visible */
+.footer {
+    background: #000 !important;
+    color: rgba(255,255,255,0.9) !important;
+}
+
+/* Cover nav: add transition and hidden state */
+.cover-nav {
+    transition: transform 300ms ease, opacity 300ms ease;
+}
+.cover-nav.nav-hidden {
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Ensure images with white backgrounds blend in */
+.carousel-img,
+.article-image,
+.card-img-top {
+    background: rgba(0,0,0,0.12);
+}
+
+/* Mobile: make panels readable on small screens */
+@media (max-width: 880px) {
+    .content-section,
+    .month-section,
+    .feature-card {
+        background: rgba(255,255,255,0.02) !important;
+    }
+}
+
+/* Calendar page: ensure white boxes keep black text for readability */
+.calendar-content .month-section,
+.calendar-content .event-item {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+.calendar-content .month-section h2,
+.calendar-content .event-date,
+.calendar-content .event-title,
+.calendar-content .event-desc {
+    color: #000000 !important;
+}
+
+/* Keep hover state subtle but readable */
+.calendar-content .event-item:hover {
+    background: #f0f0f0 !important;
+}
+
+/* When the nav is detached to the body we add a small offset so the
+   page content doesn't sit under the fixed navbar. The JS sets
+   `--nav-offset` dynamically; default to 70px. */
+.nav-detached .cover-container {
+    padding-top: var(--nav-offset, 70px);
+    box-sizing: border-box;
+}
+
+/* Also offset the immediate content after the cover so pages without
+   a cover-container (if any) are handled. */
+.nav-detached .cover-container + * {
+    margin-top: var(--nav-offset, 70px);
 }

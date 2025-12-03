@@ -116,12 +116,18 @@ function handleEmailButtonClick() {
     // openEmail();
 }
 
-// Parallax effect for cover section
+// Parallax effect for cover section - adjust background position only
 window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
+    const scrolled = window.pageYOffset || 0;
     const coverContainer = document.querySelector('.cover-container');
     if (coverContainer) {
-        coverContainer.style.transform = `translateY(${scrolled * 0.5}px)`;
+        // Avoid applying transform to the container element because transforms
+        // create a containing block that can change how `position: fixed` behaves
+        // (fixed elements become relative to transformed ancestors). Instead,
+        // shift the background-position to achieve a subtle parallax effect.
+        const basePercent = 20; // matches the CSS default background-position vertical percent
+        const offsetPercent = scrolled * 0.02; // tuned factor for gentle movement
+        coverContainer.style.backgroundPosition = `100% ${basePercent + offsetPercent}%`;
     }
 });
 
@@ -146,6 +152,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Detach the nav from any transformed ancestor and move it to document.body
+    // This prevents ancestor transforms or stacking contexts from hiding the fixed nav.
+    (function detachNavToBody() {
+        const nav = document.querySelector('.cover-nav');
+        if (!nav) return;
+        // If already detached, do nothing
+        if (nav.parentElement === document.body) return;
+
+        const navHeight = nav.offsetHeight || 70;
+        try {
+            document.body.insertBefore(nav, document.body.firstChild);
+            // Expose nav height to CSS so content can be offset
+            document.documentElement.style.setProperty('--nav-offset', navHeight + 'px');
+            document.documentElement.classList.add('nav-detached');
+            // Ensure the nav is fixed and topmost
+            nav.style.position = 'fixed';
+            nav.style.top = '0';
+            nav.style.left = '0';
+            nav.style.right = '0';
+            nav.style.zIndex = '2147483647';
+        } catch (e) {
+            // If DOM manipulation fails, silently continue — nav will still function if present.
+            console.error('Failed to detach nav to body:', e);
+        }
+    })();
+
     // Hide / show navbar on scroll: hide when scrolling down, show when scrolling up
     (function () {
         const nav = document.querySelector('.cover-nav');
@@ -164,11 +196,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (currentY < 60) {
                         // near top always show
                         nav.classList.remove('nav-hidden');
-                    } else if (delta > 10) {
-                        // scrolling down
+                    } else if (delta > 0) {
+                        // any downward scroll: hide
                         nav.classList.add('nav-hidden');
-                    } else if (delta < -10) {
-                        // scrolling up
+                    } else if (delta < 0) {
+                        // any upward scroll: show immediately
                         nav.classList.remove('nav-hidden');
                     }
                     lastY = currentY;
