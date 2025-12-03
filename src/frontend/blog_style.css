@@ -87,6 +87,7 @@ html, body {
     -webkit-backdrop-filter: blur(6px);
     padding: 1rem 2rem;
     height: 70px;
+    transition: transform 240ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
 }
 .navbar-brand {
     color: #fff;
@@ -147,6 +148,13 @@ html, body {
     font-size: 1rem;
 }
 .cover-nav-link:hover { color: #3498db; }
+
+/* When scrolling down, hide the nav by moving it out of view */
+.cover-nav.nav-hidden {
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+}
 
 @media (max-width: 768px) {
     .navbar-links {
