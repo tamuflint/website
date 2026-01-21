@@ -3,11 +3,6 @@ html, body {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Fix background image overlap on scroll */
-.cover-container {
-    background-attachment: scroll !important;
-}
-
 @media (max-width: 768px) {
     .cover-nav {
         position: static !important;

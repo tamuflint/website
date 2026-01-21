@@ -127,7 +127,7 @@ window.addEventListener('scroll', () => {
         // shift the background-position to achieve a subtle parallax effect.
         const basePercent = 20; // matches the CSS default background-position vertical percent
         const offsetPercent = scrolled * 0.02; // tuned factor for gentle movement
-        coverContainer.style.backgroundPosition = `100% ${basePercent + offsetPercent}%`;
+        coverContainer.style.backgroundPosition = `center ${basePercent + offsetPercent}%`;
     }
 });
 
