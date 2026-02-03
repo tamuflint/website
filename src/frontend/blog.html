@@ -81,44 +81,48 @@
 <script src="script.js"></script>
 <!-- Inline preview script: clicking a headline populates the right column -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const items = document.querySelectorAll('.headline-item');
-    const previewHost = document.querySelector('.blog-main');
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        const items = document.querySelectorAll('.headline-item');
+        const previewHost = document.querySelector('.blog-main');
 
-    if (!previewHost) return;
+        if (!previewHost) return;
 
-    items.forEach((item, idx) => {
-        // add data attributes if missing so each headline has placeholder content
-        if (!item.dataset.title) item.dataset.title = item.textContent.trim();
-        if (!item.dataset.body) item.dataset.body = 'Placeholder text here. Replace with the full article copy later.';
-        if (!item.dataset.img) item.dataset.img = 'https://placehold.co/800x450?text=Placeholder+' + (idx+1);
+        items.forEach((item, idx) => {
+            // add data attributes if missing so each headline has placeholder content
+            if (!item.dataset.title) item.dataset.title = item.textContent.trim();
+            if (!item.dataset.body) item.dataset.body = 'Placeholder text here. Replace with the full article copy later.';
+            if (!item.dataset.img) item.dataset.img = 'https://placehold.co/800x450?text=Placeholder+' + (idx+1);
 
-        item.addEventListener('click', function (e) {
-            e.preventDefault();
-            // set active state
-            items.forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                // set active state
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
 
-            const title = item.dataset.title;
-            const body = item.dataset.body;
-            const img = item.dataset.img;
+                const title = item.dataset.title;
+                const body = item.dataset.body;
+                const img = item.dataset.img;
 
-            previewHost.innerHTML = `
-                <article class="article-preview">
-                    <h3 class="article-title">${title}</h3>
-                    <div class="article-media">
-                        <img class="article-image" src="${img}" alt="${title} image">
-                    </div>
-                    <p class="article-body">${body}</p>
-                </article>
-            `;
+                previewHost.innerHTML = `
+                    <article class="article-preview">
+                        <h3 class="article-title">${title}</h3>
+                        <div class="article-media">
+                            <img class="article-image" src="${img}" alt="${title} image">
+                        </div>
+                        <p class="article-body">${body}</p>
+                    </article>
+                `;
 
-            // move focus into preview for accessibility
-            const firstHeading = previewHost.querySelector('.article-title');
-            if (firstHeading) firstHeading.focus({preventScroll:true});
+                // move focus into preview for accessibility
+                const firstHeading = previewHost.querySelector('.article-title');
+                if (firstHeading) firstHeading.focus({preventScroll:true});
+            });
         });
+        if (items.length > 0) {
+        items[0].click();
+        }
     });
-});
 </script>
 </body>
 </html>
