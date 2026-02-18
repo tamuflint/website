@@ -24,7 +24,7 @@ html, body {
 
 
 /* Cover Section - FIXED VERSION */
-.cover-container {
+body.index .cover-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -47,7 +47,7 @@ html, body {
 
 /* REMOVE OR COMMENT OUT THE ::before PSEUDO-ELEMENT - IT'S BLOCKING THE IMAGE */
 /*
-.cover-container::before {
+body.index .cover-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -61,7 +61,7 @@ html, body {
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
-    .cover-container {
+    body.index .cover-container {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                     url('../../assets/group-photo.JPG') !important;
         background-attachment: scroll !important;
