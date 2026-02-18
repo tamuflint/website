@@ -622,6 +622,11 @@
       </div>
     </div>
     
+    <!-- Drew Easter Egg Image -->
+    <div id="drew-egg" class="drew-egg">
+        <img src="../../assets/DrewBanquet.jpeg" alt="Drew Banquet" class="drew-egg-img">
+    </div>
+
     <!-- Add script to make all modal dialogs larger -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -630,8 +635,45 @@
         modalDialogs.forEach(function(dialog) {
           dialog.classList.add('modal-lg');
         });
+
+        // Drew Easter Egg: detect when "drew" is typed
+        const drewSequence = 'drew';
+        let typedSequence = '';
+        let drewTimeout;
+
+        document.addEventListener('keypress', (e) => {
+            // Add the typed character to the sequence
+            typedSequence += e.key.toLowerCase();
+
+            // Keep only the last 4 characters
+            if (typedSequence.length > drewSequence.length) {
+                typedSequence = typedSequence.slice(-drewSequence.length);
+            }
+
+            // Clear the sequence if user hasn't typed in a while
+            clearTimeout(drewTimeout);
+            drewTimeout = setTimeout(() => {
+                typedSequence = '';
+            }, 3000);
+
+            // Check if the sequence ends with "drew"
+            if (typedSequence === drewSequence) {
+                showDrewEgg();
+                typedSequence = ''; // Reset sequence
+            }
+        });
+
+        function showDrewEgg() {
+            const drewEgg = document.getElementById('drew-egg');
+            if (drewEgg) {
+                drewEgg.style.display = 'block';
+                // Hide after animation completes (5 seconds)
+                setTimeout(() => {
+                    drewEgg.style.display = 'none';
+                }, 5000);
+            }
+        }
       });
-    </script>
     </script>
 </body>
 </html>
@@ -639,4 +681,49 @@
     <style>
     /* Ensure navbar sits above all page content (overrides other styles) */
     .cover-nav { z-index: 2147483647 !important; position: fixed !important; top: 0; left: 0; right: 0; }
+    </style>
+
+    <style>
+    /* Ensure navbar sits above all page content (overrides other styles) */
+    .cover-nav { z-index: 2147483647 !important; position: fixed !important; top: 0; left: 0; right: 0; }
+
+    /* Drew Easter Egg Styles */
+    .drew-egg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+        display: none;
+        animation: fadeInOut 5s ease-in-out forwards;
+    }
+
+    .drew-egg-img {
+        max-width: 90vw;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+        10% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        90% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+    }
     </style>
