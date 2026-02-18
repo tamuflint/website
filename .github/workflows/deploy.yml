@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare public directory
+        run: |
+          set -e
+          rm -rf public
+          mkdir public
+          cp -r src/frontend/* public/
+          if [ -d assets ]; then
+            cp -r assets public/assets
+          fi
+          # Normalize asset paths so they work on GitHub Pages
+          find public -type f -exec sed -i 's|\.\./\.\./assets/|assets/|g' {} + || true
+          find public -type f -exec sed -i 's|\.\./assets/|assets/|g' {} + || true
+          find public -type f -exec sed -i 's|/assets/|assets/|g' {} + || true
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          commit_message: Deploy site via GitHub Actions
