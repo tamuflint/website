@@ -12,7 +12,7 @@ fn root() {
 #[test]
 fn assets() {
     let client = Client::tracked(rocket()).expect("valid rocket instance");
-    let mut response = client.get(uri!("/assets/logo.png")).dispatch();
+    let mut response = client.get(uri!("/assets/logo.webp")).dispatch();
     assert_eq!(response.status(), Status::Ok);
-    assert_eq!(response.content_type(), Some(ContentType::PNG));
+    assert_eq!(response.content_type(), Some(ContentType::new("image", "webp")));
 }
