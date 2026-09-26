@@ -24,6 +24,10 @@ html, body {
 
 
 /* Cover Section - FIXED VERSION */
+body:not(.index) .cover-container {
+    background-image: none !important;
+}
+
 body.index .cover-container {
     display: flex;
     flex-direction: column;
@@ -32,7 +36,7 @@ body.index .cover-container {
     
     /* Background image with overlay */
     background:  
-                url('../../assets/Errbody2.webp');
+                url('../../assets/Errbody2.webp?v=20260925');
     background-size: cover;
     background-position: 100% 20%;
     background-repeat: no-repeat;
@@ -63,7 +67,7 @@ body.index .cover-container::before {
 @media (max-width: 768px) {
     body.index .cover-container {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                    url('../../assets/group-photo.webp') !important;
+                    url('../../assets/Errbody2.webp?v=20260925') !important;
         background-attachment: scroll !important;
         background-position: center 30% !important;
         background-size: cover !important;
